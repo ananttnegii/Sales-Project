@@ -123,32 +123,32 @@ select * from transaction_dim where payment_key is null;
 
 - Checking for duplicate values
 
-  ```sql
-  -- 1. in fact_table
+```sql
+-- 1. in fact_table
 
-  select count(*) from fact_table;
+select count(*) from fact_table;
 
-  select count(*)
-  from
+select count(*)
+from
 	(select distinct customer_key, time_key, store_key from fact_table) as x
  
-  -- 2. in customer_dim
-  select count(*), count(distinct customer_key) from customer_dim
+-- 2. in customer_dim
+select count(*), count(distinct customer_key) from customer_dim
 
-  -- 3. in item_dim
-  select count(*), count(distinct item_key) from item_dim
+-- 3. in item_dim
+select count(*), count(distinct item_key) from item_dim
 
-  -- 4. in store_dim
-  select count(*), count(distinct store_key) from store_dim;
+-- 4. in store_dim
+select count(*), count(distinct store_key) from store_dim;
 
-  -- 5. in time_dim
+-- 5. in time_dim
 					   
-  select count(*), count(distinct time_key) from time_dim;
+select count(*), count(distinct time_key) from time_dim;
 
-  -- 6. in transaction_dim
+-- 6. in transaction_dim
 
-  select count(*), count(distinct payment_key) from transaction_dim; 
-  ```
+select count(*), count(distinct payment_key) from transaction_dim; 
+```
 
 ### Recommendations / Findings
 There is no Growth
