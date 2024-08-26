@@ -6,6 +6,7 @@
 - [Tools](#Tools)
 - [Data Uploading in PostgreSQL](#Data-Uploading-in-PostgreSQL)
 - [Data Cleaning](#Data-Cleaning)
+- [Data Analysis](#Data-Analysis)
 - [Recommendations / Findings](#Recommendations--Findings)
 
 ### Description
@@ -148,6 +149,65 @@ select count(*), count(distinct time_key) from time_dim;
 -- 6. in transaction_dim
 
 select count(*), count(distinct payment_key) from transaction_dim; 
+```
+
+### Data Analysis
+
+```
+-- Sales trend analysis over time (monthly, yearly) 
+
+/* revenue, units, avg at year-month-day level */
+
+-- sales 
+select year, month, 
+	sum(total_price) as revenue,
+	sum(quantity::int) as units_sold,
+	avg(total_price) as avg_revenue
+from fact_table as ft join time_dim as td
+	on ft.time_key = td.time_key
+group by year, month
+
+-- avg
+select year, avg(total_price) as avg_revenue
+from fact_table as ft join time_dim as td
+	on ft.time_key = td.time_key
+group by year
+
+/* products and categories */
+
+-- Top 5 categories and items by revenue, comparison with others
+
+-- categories
+with amt as ( 
+	select descent,
+		sum(total_price) as amount
+	from fact_table as ft join item_dim as id
+		on ft.item_key = id.item_key
+	group by descent ),
+dense as ( 
+	select *, dense_rank() over(order by amount desc) as dr
+	from amt )
+select 
+	case when dr <= 5 then descent else 'Others' end as descent,
+	sum(amount)
+from dense
+group by (case when dr <= 5 then descent else 'Others' end)
+
+-- items
+with amt as ( 
+	select item_name,
+		sum(total_price) as amount
+	from fact_table as ft join item_dim as id
+		on ft.item_key = id.item_key
+	group by item_name ),
+dense as ( 
+	select *, dense_rank() over(order by amount desc) as dr
+	from amt )
+select 
+	case when dr <= 5 then item_name else 'Others' end as descent,
+	sum(amount)
+from dense
+group by (case when dr <= 5 then item_name else 'Others' end)
 ```
 
 ### Recommendations / Findings
