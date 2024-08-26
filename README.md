@@ -3,6 +3,10 @@
 ### Contents
 - [Description](#Description)
 - [Data Source](#Data-Source)
+- [Tools](#Tools)
+- [Data Uploading in PostgreSQL](#Data-Uploading-in-PostgreSQL)
+- [Data Cleaning](#Data-Cleaning)
+- [Recommendations / Findings](#Recommendations-/-Findings)
 
 ### Description
 
