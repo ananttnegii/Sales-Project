@@ -153,7 +153,7 @@ select count(*), count(distinct payment_key) from transaction_dim;
 
 ### Data Analysis
 
-```
+```sql
 -- Sales trend analysis over time (monthly, yearly) 
 
 /* revenue, units, avg at year-month-day level */
