@@ -215,11 +215,26 @@ group by (case when dr <= 5 then item_name else 'Others' end)
 ```
 
 ### Recommendations / Findings
-There is no Growth
+
+There is no growth, revenue, units sold and average has been a constant for the years 2014 to 2020.
 
 ![sales](https://github.com/user-attachments/assets/6223a6ea-9cb4-4d1e-b972-b5b93b9465d6)
 
-### References
+Our top category is Beverage - Energy/Protein
+
+![top_categories](https://github.com/user-attachments/assets/5e336ea6-7894-43d3-912c-bd1f0c9264e4)
+
+Red Bull 12oz is our top poduct
+
+![top_products](https://github.com/user-attachments/assets/c001d237-7ef1-4931-a2be-698dca82387e)
+
+Our customers prefer to pay by card
+
+![preferred payment](https://github.com/user-attachments/assets/b63a3cb7-719c-40b0-8c5f-a2c0a84d96c5)
+
+There is very little diffrence in our top 5 banks, almost gives us a revenue of 0.5 crores
+
+![banks](https://github.com/user-attachments/assets/18f54bff-de39-4b87-87ad-a712fdb36e7b)
 
 
 
