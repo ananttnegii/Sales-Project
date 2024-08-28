@@ -11,7 +11,7 @@
 
 ### Description
 
-This project aims to do a absic analysis on sales of an ecommerce company.I have analysed its yearly revenue, top selling categories and products, banks and preferred payment methods. 
+This project aims to do a basic analysis on sales of an ecommerce company.I have analysed its yearly revenue, top selling categories and products, banks and preferred payment methods. 
 
 ### Data Source
 -  Kaggle [Link](https://www.kaggle.com/datasets/mmohaiminulislam/ecommerce-data-analysis)
