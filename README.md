@@ -124,7 +124,7 @@ select * from time_dim where time_key is null;
 select * from transaction_dim where payment_key is null;
 ```
 
-- Checking for duplicate values
+- Checking for duplicate values, I have counted number of rows and number of values of primary key in that table to determine if there are any duplicate values.
 
 ```sql
 -- 1. in fact_table
