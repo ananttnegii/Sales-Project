@@ -11,7 +11,7 @@
 
 ### Description
 
-This project aims to .....
+This project aims to do a absic analysis on sales of an ecommerce company.I have analysed its yearly revenue, top selling categories and products, banks and preferred payment methods. 
 
 ### Data Source
 -  Kaggle [Link](https://www.kaggle.com/datasets/mmohaiminulislam/ecommerce-data-analysis)
@@ -22,12 +22,14 @@ This project aims to .....
 
 ### Data Uploading in PostgreSQL
 
+- Below are the queries used for creating 6 tables that we have used for analysis
+
 ```sql
 -- creating and inserting data in tables
 
 create table fact_table (
 	payment_key varchar(10),
-	coustomer_key varchar(10),
+	customer_key varchar(10),
 	time_key varchar(10),
 	item_key varchar(10),
 	store_key varchar(10),
@@ -39,7 +41,7 @@ create table fact_table (
 select * from fact_table;
 
 create table customer_dim (
-	coustomer_key varchar(10),
+	customer_key varchar(10),
 	name varchar(50),
 	contact_no varchar(20),
 	nid varchar(20));
