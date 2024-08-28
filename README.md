@@ -18,7 +18,7 @@ This project aims to do a basic analysis on sales of an ecommerce company.I have
 
 ### Tools
 - SQL (PostgreSQL) - Updating, cleaning and analyzing data
-- Google Sheets - Presenting report [Sheet Link](https://docs.google.com/spreadsheets/d/1RD8amgf98O40_lbTmLqcBZX6MZahbqNT_aFWPCENHL0/edit?gid=0#gid=0)
+- Google Sheets - Presenting report [Sheet Link](https://docs.google.com/spreadsheets/d/1RD8amgf98O40_lbTmLqcBZX6MZahbqNT_aFWPCENHL0/edit?gid=1779673857#gid=1779673857)
 
 ### Data Uploading in PostgreSQL
 
