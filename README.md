@@ -155,6 +155,8 @@ select count(*), count(distinct payment_key) from transaction_dim;
 
 ### Data Analysis
 
+- Below are the queries used for analysing data. 
+
 ```sql
 -- Sales trend analysis over time (monthly, yearly) 
 
